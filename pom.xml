@@ -9,7 +9,7 @@
   <url>http://maven.apache.org</url>
 
   <properties>
-      <!-- This property will be set by the Maven Dependency plugin -->
+      <!-- This property will be set by the Maven Dependency plugins -->
       <annotatedJdk>${org.checkerframework:jdk8:jar}</annotatedJdk>
   </properties>
 
@@ -23,7 +23,7 @@
     <dependency>
         <groupId>org.checkerframework</groupId>
         <artifactId>checker</artifactId>
-        <version>1.9.4</version>
+        <version>1.9.5</version>
     </dependency>
     <dependency>
         <groupId>org.checkerframework</groupId>
@@ -33,7 +33,7 @@
     <dependency>
         <groupId>org.checkerframework</groupId>
         <artifactId>jdk8</artifactId>
-        <version>1.9.4</version>
+        <version>1.9.5</version>
 	  </dependency>
 	   <dependency>
                         <groupId>org.codehaus.plexus</groupId>
@@ -116,12 +116,12 @@
               <source>1.8</source>
               <target>1.8</target>
               <fork>true</fork>
-              <!-- Add all the checkers you want to enable here -->
+              <!-- Add all the checkers you wanted to enable here -->
               <annotationProcessors>
                   <annotationProcessor>org.checkerframework.checker.nullness.NullnessChecker</annotationProcessor>
               </annotationProcessors>
               <compilerArgs>
-                  <!-- location of the annotated JDK, which comes from a Maven dependency -->
+                  <!-- locations of the annotated JDK, which comes from a Maven dependency -->
                   <arg>-Xbootclasspath/p:${annotatedJdk}</arg>
               </compilerArgs>
           </configuration>
